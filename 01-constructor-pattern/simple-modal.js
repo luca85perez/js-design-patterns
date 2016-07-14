@@ -1,3 +1,11 @@
+/**
+ * Creates a new modal
+ * @class
+ * @param {string}    trigger       - trigger selector
+ * @param {string}    container     - container selector
+ * @param {string}    closeBtnClass - close button class string
+ * @return {function} init          - init modal instance
+ */
 function Modal(trigger, container, closeBtnClass) {
   this.trigger = document.querySelector(trigger);
   this.container = document.querySelector(container);
@@ -5,16 +13,28 @@ function Modal(trigger, container, closeBtnClass) {
   return this.init();
 }
 
+/**
+ * add 'is-open' class to container
+ * @return {object} - Modal
+ */
 Modal.prototype.open = function () {
   this.container.classList.add('is-open');
   return this;
 };
 
+/**
+ * remove 'is-open' class from container
+ * @return {object} - Modal
+ */
 Modal.prototype.close = function () {
   this.container.classList.remove('is-open');
   return this;
 };
 
+/**
+ * add events to trigger and closeBtn
+ * @return {object} - Modal
+ */
 Modal.prototype.bindEvents = function () {
   const self = this;
 
@@ -31,6 +51,10 @@ Modal.prototype.bindEvents = function () {
   return this;
 };
 
+/**
+ * create and append closeBtn to container
+ * @return {object} - Modal
+ */
 Modal.prototype.addCloseBtn = function () {
   const closeBtn = document.createElement('button');
   closeBtn.textContent = 'Close';
@@ -39,6 +63,10 @@ Modal.prototype.addCloseBtn = function () {
   return this;
 };
 
+/**
+ * Init modal instance
+ * @return {object} - Modal
+ */
 Modal.prototype.init = function () {
   this.addCloseBtn();
   this.bindEvents();
