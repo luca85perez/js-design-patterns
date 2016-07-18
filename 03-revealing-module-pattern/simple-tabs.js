@@ -6,12 +6,14 @@ const tabs = (function tabs() {
   /**
    * Stores the current visible tab container
    * @type {HTMLElement}
+   * @memberof tabs
    */
   let visibleContainer;
 
   /**
    * Stores the current active button
    * @type {HTMLElement}
+   * @memberof tabs
    */
   let activeBtn;
 
