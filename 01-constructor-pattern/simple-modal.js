@@ -1,9 +1,9 @@
 /**
  * Creates a new modal
  * @class
- * @param {string}    trigger       - trigger selector
- * @param {string}    container     - container selector
- * @param {string}    closeBtnClass - close button class string
+ * @param  {string}   trigger       - trigger selector
+ * @param  {string}   container     - container selector
+ * @param  {string}   closeBtnClass - close button class string
  * @return {function} init          - init modal instance
  */
 function Modal(trigger, container, closeBtnClass) {
